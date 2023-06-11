@@ -1,0 +1,2 @@
+id				login				name				last_name				password				number				email				country				city				bday				LSO				role
+0 1 1 1 1 1 1  1 1 2023-06-03 15:23:27.236159 2023-06-03 15:23:27.236159 				
