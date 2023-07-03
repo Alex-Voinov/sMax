@@ -1,6 +1,7 @@
 def primary_creation() -> bool:
-    request_user: str = '> Желаете ли вы создать базу данных?\n> '
-    if input(request_user).lower().strip() in ('да', 'конечно', 'y', 'yes', '+'):
+    from working_user.funk_atteraction import getResponce
+    from working_os_path.save import refresh_DB_path
+    if getResponce('Желаете ли вы создать базу данных?', notification='Базад данных не найдена'):
         from data.data_const import(
             DIR_DB,
             MAIN_DB,
@@ -45,6 +46,7 @@ def primary_creation() -> bool:
                     file=db_file_dis,
                     end=''
                 )
+                refresh_DB_path(path_db_main)
         except:
             return False
         return True

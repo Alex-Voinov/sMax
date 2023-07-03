@@ -1,5 +1,6 @@
-PATH_DATABASE: str = r'C:\Users\Voino\Maxim\DataBase\main_data.txt' 
+PATH_CONST_FILE: str = __import__('os').path.abspath(__file__)
 
+PATH_DATABASE: str = r'c:\Users\Voino\Maxim\sMax\DataBase\main_data.txt'
 FIELDS_MAIN_DB: tuple[str] = (
     'id',
     'login',
@@ -23,10 +24,3 @@ SPECIAL_FIELD: tuple[int, int] = (7, 9)
 SEPARATION: str = '\t' * 4
 DIR_DB: str = 'DataBase'
 MAIN_DB: str = 'main_data'
-
-
-if not (user_name := input('Введи своё имя')):
-    print('Ты не ввел имя')
-    exit()
-
-print(f'Привет {user_name}')
