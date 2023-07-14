@@ -5,7 +5,7 @@ def refresh_DB_path(new_path: str) -> bool:
             context: list[str] = constFile.readlines()
         for number, row in enumerate(context):
             if row.startswith('PATH_DATABASE: str = '):
-                context[number] = f"PATH_DATABASE: str = r'{new_path}'"
+                context[number] = f"PATH_DATABASE: str = r'{new_path}'\n"
         with open(PATH_CONST_FILE, 'wt', encoding='utf-8') as constFile:
             print(*context, sep='', end='', file = constFile)
         print('Новая база данных усешно заристрирована в системе')

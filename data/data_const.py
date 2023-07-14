@@ -24,3 +24,19 @@ SPECIAL_FIELD: tuple[int, int] = (7, 9)
 SEPARATION: str = '\t' * 4
 DIR_DB: str = 'DataBase'
 MAIN_DB: str = 'main_data'
+
+MIN_LENGTH_PASS: int = 5
+MAX_LENGTH_PASS: int = 15
+     
+SSET: str = '~`!@#$%^&*()_+=-[];\\/|<>'
+MAX_REPEAT_CHAR: int = 5
+DENIED_COMBO: tuple[str] = (
+    'QWER',
+    'ABC',
+    'ZXC',
+    '1234',
+    '9876',
+    '0000',
+    '1111',
+    'pas',
+)

@@ -12,6 +12,7 @@ def primary_creation() -> bool:
         )
         from os.path import  abspath, split, join
         from datetime import datetime as D
+        from working_user.get_password import get_hash_password
         START_SPECIAL_FIELD = 0
         LAST_SPECIAL_FIELD = 0
 
@@ -35,6 +36,8 @@ def primary_creation() -> bool:
                             user_data.append(D.now())
                     elif SPECIAL_FIELD[START_SPECIAL_FIELD] <= index <= SPECIAL_FIELD[LAST_SPECIAL_FIELD]:
                         user_data.append('')
+                    elif field=='password':
+                        user_data.append(get_hash_password())
                     else:
                         user_data.append(input(f'\n> Введи <{field}>'))
                 print(
