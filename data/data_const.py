@@ -21,6 +21,15 @@ FIELDS_MAIN_DB: tuple[str] = (
 SYS_FIELDS: tuple[int] = (0, 10, 11)
 SPECIAL_FIELD: tuple[int, int] = (7, 9)
 
+LANGUAGE_LIST: tuple[str] = (
+    'Русский язык',
+    'English language',
+    '中文'
+)
+
+UNKNOW: int = -1
+KEY_LAN: int = UNKNOW
+
 SEPARATION: str = '\t' * 4
 DIR_DB: str = 'DataBase'
 MAIN_DB: str = 'main_data'
